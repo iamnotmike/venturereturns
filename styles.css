@@ -5,8 +5,8 @@
   --bg-3:  #111;
   --fg:    #fff;
   --fg-2:  rgba(255,255,255,.5);
-  --fg-3:  rgba(255,255,255,.22);
-  --fg-4:  rgba(255,255,255,.1);
+  --fg-3:  rgba(255,255,255,.46);  /* min 4.5:1 on #000 */
+  --fg-4:  rgba(255,255,255,.1);   /* decorative only — never use for readable text */
   --rule:  rgba(255,255,255,.07);
   --blue:  #4f8cff;
   --lime:  #c8ff47;
@@ -239,7 +239,7 @@ button { font:inherit; cursor:pointer; border:none; background:none; }
 }
 .product-table-head span {
   font-family:ui-monospace,'SF Mono',monospace;
-  font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--fg-4);
+  font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--fg-3);
 }
 .product-row {
   display:grid; grid-template-columns:200px 1fr 110px 80px;
@@ -261,7 +261,7 @@ a.product-row:hover .pr-name { color:var(--fg); }
   font-size:.68rem; letter-spacing:.06em; font-weight:500;
 }
 .pr-status.live { color:rgba(255,255,255,.55); }
-.pr-status.dev  { color:rgba(255,255,255,.2); }
+.pr-status.dev  { color:rgba(255,255,255,.5); }
 
 /* ── INVESTING ──────────────────────────────────────────── */
 .invest-cols {
@@ -375,7 +375,7 @@ a.product-row:hover .pr-name { color:var(--fg); }
   transition:border-color .15s, background .15s;
 }
 .field select {
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='rgba(255,255,255,.2)' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='rgba(255,255,255,.5)' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat:no-repeat; background-position:right .8rem center; background-size:12px;
   padding-right:2rem;
 }
@@ -409,19 +409,19 @@ a.product-row:hover .pr-name { color:var(--fg); }
   display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;
 }
 .footer-brand { display:flex; align-items:center; gap:.5rem; }
-.footer-brand .logo-name { font-size:.75rem; color:var(--fg-4); }
+.footer-brand .logo-name { font-size:.75rem; color:var(--fg-3); }
 .footer-nav { display:flex; gap:1.75rem; }
 .footer-nav a {
   font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--fg-4); transition:color .15s;
+  color:var(--fg-2); transition:color .15s;
 }
-.footer-nav a:hover { color:var(--fg-2); }
-.footer-copy { font-size:.7rem; color:var(--fg-4); }
+.footer-nav a:hover { color:var(--fg); }
+.footer-copy { font-size:.7rem; color:var(--fg-3); }
 
 /* ── VERTICAL ACCENT COLORS ─────────────────────────────── */
 /* Consulting → blue */
 #consulting .mono-label                { color:var(--blue); }
-#consulting .svc-num                   { color:rgba(79,140,255,.35); }
+#consulting .svc-num                   { color:var(--blue); }
 #consulting .result-metric             { color:var(--blue); }
 #consulting .service-row:hover         { border-top-color:rgba(79,140,255,.3); }
 #consulting .service-row:hover .svc-arrow { color:var(--blue); opacity:1; }

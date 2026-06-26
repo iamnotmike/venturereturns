@@ -68,3 +68,8 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 }
 
 // Form submission handled by @formspree/ajax (see script tags in index.html)
+
+// Decorative numbering — no semantic value beyond visual structure
+document.querySelectorAll('.svc-num, .svc-arrow, .invest-num').forEach(el => {
+  el.setAttribute('aria-hidden', 'true');
+});
