@@ -25,9 +25,9 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Scroll reveal with stagger
 const revealEls = document.querySelectorAll([
-  '.pillar-card', '.service-card', '.product-card',
-  '.invest-card', '.step', '.results-bar-item',
-  '.contact-text', '.contact-form',
+  '.stat-item', '.service-row', '.result-item',
+  '.product-row', '.invest-col',
+  '.contact-left', '.contact-form',
 ].join(', '));
 
 revealEls.forEach(el => el.classList.add('reveal'));
@@ -53,7 +53,7 @@ const sectionIO = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       navAnchors.forEach(a => {
         a.style.color = a.getAttribute('href') === `#${entry.target.id}`
-          ? 'var(--gold-light, #e8c46a)' : '';
+          ? 'var(--fg)' : '';
       });
     }
   });

@@ -29,3 +29,5 @@ Disallow: /
 # Allow all other crawlers (search engines)
 User-agent: *
 Allow: /
+
+Sitemap: https://venturereturns.com/sitemap.xml
