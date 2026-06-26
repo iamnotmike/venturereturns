@@ -582,6 +582,7 @@ a, button { cursor: none; }
   width: 10px; height: 10px; border-radius: 50%;
   background: #fff; pointer-events: none;
   z-index: 99999;
+  transform: translate(-50%, -50%);
   transition: width .22s var(--ease), height .22s var(--ease), background .22s, border .22s;
   mix-blend-mode: difference;
   will-change: left, top;
