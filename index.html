@@ -8,10 +8,10 @@
   <meta property="og:title" content="Venture Returns | Consult. Build. Invest." />
   <meta property="og:description" content="A boutique firm advising growth-stage companies, building AI-native software products, and deploying capital across early-stage startups, collectibles, and endurance sports." />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23c9a84c'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%230a0a0a'%3EVR%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23ffffff'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%23000000'%3EVR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -48,7 +48,7 @@
       <p class="eyebrow">Multi-vertical operator &amp; capital deployer</p>
       <h1 class="hero-hl">
         <span class="hl-line">Consult.</span>
-        <span class="hl-line hl-gold"><em>Build.</em></span>
+        <span class="hl-line hl-italic"><em>Build.</em></span>
         <span class="hl-line">Invest.</span>
       </h1>
       <div class="hero-foot">
@@ -60,30 +60,6 @@
       </div>
     </div>
   </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-track">
-      <span>Consulting</span><span class="dot">·</span>
-      <span>Venture Studio</span><span class="dot">·</span>
-      <span>Angel Investing</span><span class="dot">·</span>
-      <span>Collectibles</span><span class="dot">·</span>
-      <span>Endurance Sports</span><span class="dot">·</span>
-      <span>Growth Strategy</span><span class="dot">·</span>
-      <span>Data &amp; Analytics</span><span class="dot">·</span>
-      <span>Go-to-Market</span><span class="dot">·</span>
-      <span>Software Development</span><span class="dot">·</span>
-      <span>Consulting</span><span class="dot">·</span>
-      <span>Venture Studio</span><span class="dot">·</span>
-      <span>Angel Investing</span><span class="dot">·</span>
-      <span>Collectibles</span><span class="dot">·</span>
-      <span>Endurance Sports</span><span class="dot">·</span>
-      <span>Growth Strategy</span><span class="dot">·</span>
-      <span>Data &amp; Analytics</span><span class="dot">·</span>
-      <span>Go-to-Market</span><span class="dot">·</span>
-      <span>Software Development</span><span class="dot">·</span>
-    </div>
-  </div>
 
   <!-- STATS -->
   <div class="stats-strip">
@@ -183,145 +159,86 @@
         <p class="section-desc">Twelve products across gaming, fintech, social, and productivity — built end-to-end using AI-accelerated development to compress timelines by an order of magnitude.</p>
       </div>
 
-      <div class="product-grid">
+      <div class="product-table">
+        <div class="product-table-head">
+          <span>Product</span>
+          <span>Description</span>
+          <span>Category</span>
+          <span>Status</span>
+        </div>
 
-        <a href="https://playpuzzleclub.com" target="_blank" rel="noopener" class="product-card">
-          <div class="product-img">
-            <img src="images/puzzle-club.png" alt="Puzzle Club" loading="lazy" />
-            <span class="badge live">Live</span>
-          </div>
-          <div class="product-info">
-            <h4>Puzzle Club</h4>
-            <p>Daily word puzzles with streaks, progression, and a growing player community.</p>
-            <span class="product-url">playpuzzleclub.com ↗</span>
-          </div>
+        <a href="https://playpuzzleclub.com" target="_blank" rel="noopener" class="product-row">
+          <span class="pr-name">Puzzle Club</span>
+          <span class="pr-desc">Daily word puzzles with streaks, progression, and a growing player community.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status live">Live ↗</span>
         </a>
-
-        <a href="https://wordsroyale.com" target="_blank" rel="noopener" class="product-card">
-          <div class="product-img product-img--icon" style="--bg:#0a180c;">
-            <img src="images/words-royale-icon.png" alt="Words Royale" loading="lazy" class="icon-img" />
-            <span class="badge live">Live</span>
-          </div>
-          <div class="product-info">
-            <h4>Words Royale</h4>
-            <p>Real-time multiplayer word game — 8 players, 21×21 board, installable PWA.</p>
-            <span class="product-url">wordsroyale.com ↗</span>
-          </div>
+        <a href="https://wordsroyale.com" target="_blank" rel="noopener" class="product-row">
+          <span class="pr-name">Words Royale</span>
+          <span class="pr-desc">Real-time multiplayer word game — 8 players, 21×21 board, installable PWA.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status live">Live ↗</span>
         </a>
-
-        <a href="https://fantasydues.app" target="_blank" rel="noopener" class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#081a0f;">
-            <span class="mono-glyph">FD</span>
-            <span class="badge live">Live</span>
-          </div>
-          <div class="product-info">
-            <h4>Fantasy Dues</h4>
-            <p>Financial back office for fantasy leagues — dues, payouts, and tournament management.</p>
-            <span class="product-url">fantasydues.app ↗</span>
-          </div>
+        <a href="https://fantasydues.app" target="_blank" rel="noopener" class="product-row">
+          <span class="pr-name">Fantasy Dues</span>
+          <span class="pr-desc">Financial back office for fantasy leagues — dues, payouts, and tournament management.</span>
+          <span class="pr-cat">Fintech</span>
+          <span class="pr-status live">Live ↗</span>
         </a>
-
-        <a href="https://triathlontribe.com" target="_blank" rel="noopener" class="product-card">
-          <div class="product-img">
-            <img src="images/triathlon-tribe.png" alt="Triathlon Tribe" loading="lazy" />
-            <span class="badge live">Live</span>
-          </div>
-          <div class="product-info">
-            <h4>Triathlon Tribe</h4>
-            <p>Social platform for triathletes — training, events, and community built around the sport.</p>
-            <span class="product-url">triathlontribe.com ↗</span>
-          </div>
+        <a href="https://triathlontribe.com" target="_blank" rel="noopener" class="product-row">
+          <span class="pr-name">Triathlon Tribe</span>
+          <span class="pr-desc">Social platform for triathletes — training, events, and community built around the sport.</span>
+          <span class="pr-cat">Social</span>
+          <span class="pr-status live">Live ↗</span>
         </a>
-
-        <a href="https://overclocktcg.com" target="_blank" rel="noopener" class="product-card">
-          <div class="product-img" style="--bg:#100820;">
-            <img src="images/overclock-tcg.png" alt="Overclock TCG" loading="lazy" />
-            <span class="badge live">Live</span>
-          </div>
-          <div class="product-info">
-            <h4>Overclock TCG</h4>
-            <p>Tactical robot trading card game — deck building, 5×5 grid combat, adaptive AI.</p>
-            <span class="product-url">overclocktcg.com ↗</span>
-          </div>
+        <a href="https://overclocktcg.com" target="_blank" rel="noopener" class="product-row">
+          <span class="pr-name">Overclock TCG</span>
+          <span class="pr-desc">Tactical robot trading card game — deck building, 5×5 grid combat, adaptive AI.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status live">Live ↗</span>
         </a>
-
-        <div class="product-card">
-          <div class="product-img" style="--bg:#04101e;">
-            <img src="images/fathomfall.png" alt="Fathomfall" loading="lazy" />
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Fathomfall</h4>
-            <p>Social-deduction battle royale — 100 divers, a shrinking abyss, one killer.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Fathomfall</span>
+          <span class="pr-desc">Social-deduction battle royale — 100 divers, a shrinking abyss, one killer.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img" style="--bg:#060e08;">
-            <img src="images/arcsevera.png" alt="Arcsevera" loading="lazy" />
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Arcsevera</h4>
-            <p>Dark-fantasy creature-collection RPG with real-time combat and offline-capable PWA.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Arcsevera</span>
+          <span class="pr-desc">Dark-fantasy creature-collection RPG with real-time combat and offline-capable PWA.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#0b1226;">
-            <span class="mono-glyph">SV</span>
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Starlane: Voidrunners</h4>
-            <p>ELO-ranked 16-ship elimination space racer — one-thumb controls, competitive economy.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Starlane: Voidrunners</span>
+          <span class="pr-desc">ELO-ranked 16-ship elimination space racer — one-thumb controls, competitive economy.</span>
+          <span class="pr-cat">Gaming</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#110d22;">
-            <span class="mono-glyph">UC</span>
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Undercurrent</h4>
-            <p>Voice-first daily reflection with on-device AI — talk daily, surface patterns.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Undercurrent</span>
+          <span class="pr-desc">Voice-first daily reflection with on-device AI — talk daily, surface patterns.</span>
+          <span class="pr-cat">Productivity</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#1a0c0c;">
-            <span class="mono-glyph">CV</span>
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Couple Vault</h4>
-            <p>Encrypted operating system for two — shared daily loop and zero-knowledge vault.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Couple Vault</span>
+          <span class="pr-desc">Encrypted operating system for two — shared daily loop and zero-knowledge vault.</span>
+          <span class="pr-cat">Social</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#08141c;">
-            <span class="mono-glyph">WC</span>
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Waycairn</h4>
-            <p>Personal CRM fused with a travel map — relationship intelligence and connection alerts.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Waycairn</span>
+          <span class="pr-desc">Personal CRM fused with a travel map — relationship intelligence and connection alerts.</span>
+          <span class="pr-cat">Productivity</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
-        <div class="product-card">
-          <div class="product-img product-img--empty" style="--bg:#050d1e;">
-            <span class="mono-glyph">CC</span>
-            <span class="badge dev">In Dev</span>
-          </div>
-          <div class="product-info">
-            <h4>Credit Card Calendar</h4>
-            <p>A calendar layer for credit card benefits — track statement credits and perk resets.</p>
-          </div>
+        <div class="product-row">
+          <span class="pr-name">Credit Card Calendar</span>
+          <span class="pr-desc">A calendar layer for credit card benefits — track statement credits and perk resets.</span>
+          <span class="pr-cat">Fintech</span>
+          <span class="pr-status dev">In Dev</span>
         </div>
-
       </div>
     </div>
   </section>
