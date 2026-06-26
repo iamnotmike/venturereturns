@@ -8,6 +8,9 @@
   --fg-3:  rgba(255,255,255,.22);
   --fg-4:  rgba(255,255,255,.1);
   --rule:  rgba(255,255,255,.07);
+  --blue:  #4f8cff;
+  --lime:  #c8ff47;
+  --amber: #f0a832;
 
   --nav-h: 60px;
   --max:   1200px;
@@ -119,6 +122,10 @@ button { font:inherit; cursor:pointer; border:none; background:none; }
 }
 .hl-line      { display:block; }
 .hl-italic em { font-style:italic; }
+.hl-blue      { color:var(--blue); }
+.hl-lime      { color:var(--lime); }
+.hl-lime em   { font-style:italic; }
+.hl-amber     { color:var(--amber); }
 
 .hero-foot {
   display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:end;
@@ -355,6 +362,24 @@ a.product-row:hover .pr-name { color:var(--fg); }
 }
 .footer-nav a:hover { color:var(--fg-2); }
 .footer-copy { font-size:.7rem; color:var(--fg-4); }
+
+/* ── VERTICAL ACCENT COLORS ─────────────────────────────── */
+/* Consulting → blue */
+#consulting .mono-label                { color:var(--blue); }
+#consulting .svc-num                   { color:rgba(79,140,255,.35); }
+#consulting .result-metric             { color:var(--blue); }
+#consulting .service-row:hover         { border-top-color:rgba(79,140,255,.3); }
+#consulting .service-row:hover .svc-arrow { color:var(--blue); opacity:1; }
+
+/* Studio → lime */
+#studio .mono-label   { color:var(--lime); }
+.pr-status.live       { color:rgba(200,255,71,.7); }
+a.product-row:hover .pr-name { color:var(--lime); }
+
+/* Investing → amber */
+#investing .mono-label   { color:var(--amber); }
+#investing .invest-num   { color:var(--amber); }
+#investing .invest-col li::before { color:rgba(240,168,50,.45); }
 
 /* ── REVEAL ─────────────────────────────────────────────── */
 .reveal {
