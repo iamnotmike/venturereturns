@@ -518,6 +518,9 @@ a.product-row:hover .pr-name { color:var(--lime); }
   .nav-links  { display:none; }
   .hamburger  { display:flex; }
 
+  /* Center hero content on mobile — flex-end creates too much dead space at top */
+  .hero { justify-content:center; }
+
   .hero-floor { grid-template-columns:1fr; gap:1.5rem; }
   .hero-actions { justify-content:flex-start; flex-wrap:wrap; gap:1rem; }
 
@@ -575,8 +578,14 @@ a.product-row:hover .pr-name { color:var(--lime); }
    ═══════════════════════════════════════════════════════════ */
 
 /* ── CUSTOM CURSOR ──────────────────────────────────────── */
-body { cursor: none; }
-a, button { cursor: none; }
+/* Only hide system cursor on true pointer devices */
+@media (pointer: fine) {
+  body { cursor: none; }
+  a, button { cursor: none; }
+}
+@media (pointer: coarse) {
+  .cursor { display: none; }
+}
 .cursor {
   position: fixed; top: 0; left: 0;
   width: 10px; height: 10px; border-radius: 50%;
@@ -609,8 +618,7 @@ a, button { cursor: none; }
 .hero-hl, .hero-floor { position: relative; z-index: 1; }
 
 /* ── MARQUEE BELT ───────────────────────────────────────── */
-@keyframes marquee     { to { transform: translateX(-50%); } }
-@keyframes marquee-rev { to { transform: translateX(50%); } }
+@keyframes marquee { to { transform: translateX(-50%); } }
 
 .marquee-belt {
   overflow: hidden;
@@ -618,7 +626,7 @@ a, button { cursor: none; }
   border-bottom: 1px solid var(--rule);
   background: var(--bg);
 }
-.marquee-belt--sm { border:none; margin-bottom: clamp(2rem,4vw,3rem); }
+.marquee-belt--sm { border:none; margin-bottom: clamp(2rem,4vw,3rem); background: transparent; }
 
 .marquee-track {
   display: inline-flex; align-items: center;
@@ -627,7 +635,7 @@ a, button { cursor: none; }
   padding: 1rem 0;
   animation: marquee 22s linear infinite;
 }
-.marquee-track--rev { animation: marquee-rev 28s linear infinite; }
+.marquee-track--rev { animation: marquee 28s linear infinite reverse; }
 
 .marquee-track span {
   font-size: clamp(1.1rem,2vw,1.75rem);
@@ -640,7 +648,7 @@ a, button { cursor: none; }
 .marquee-belt--sm .marquee-track span {
   font-size: clamp(.9rem,1.5vw,1.3rem);
   font-weight: 500; letter-spacing: .05em;
-  text-transform: none; color: rgba(255,255,255,.22);
+  text-transform: none; color: rgba(255,255,255,.48);
 }
 .marquee-belt--sm .marquee-track .mdot { color: var(--lime); }
 
@@ -678,10 +686,12 @@ a, button { cursor: none; }
   .results-strip .result-item:nth-child(2) { border-right: none; }
   .results-strip .result-item:nth-child(3) { border-top: 1px solid var(--rule); }
   .results-strip .result-item:nth-child(4) { border-top: 1px solid var(--rule); border-right: none; }
+  /* Shrink metrics so multi-word values like "Billboard #2" don't wrap */
+  .results-strip .result-metric { font-size: clamp(1.5rem, 5vw, 2.25rem); }
+  .consulting-hl { font-size: clamp(3rem, 10vw, 5rem); }
 }
 @media (max-width: 480px) {
-  .results-strip { grid-template-columns: 1fr 1fr; }
-  .consulting-hl { font-size: clamp(3.5rem, 13vw, 5.5rem); }
+  .consulting-hl { font-size: clamp(2.75rem, 10.5vw, 3.75rem); }
 }
 
 /* ── AUDIT STRIP — full saturated blue panel ────────────── */
