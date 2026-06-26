@@ -528,8 +528,6 @@ a.product-row:hover .pr-name { color:var(--lime); }
 
   .section-split { grid-template-columns:1fr; gap:2.5rem; }
   .section-split-left { position:static; }
-  .section-split-left .section-hl { margin-bottom:1.5rem; }
-  .results-col { display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
   /* Always show service descriptions on touch/mobile */
   .service-row p { max-height:none; opacity:1; margin-top:.6rem; }
   .service-row h3::after { display:none; }
@@ -649,20 +647,41 @@ a, button { cursor: none; }
   .marquee-track, .marquee-track--rev { animation: none; }
 }
 
-/* ── CONSULTING: full-width heading above split ─────────── */
-.section-top {
-  margin-bottom: clamp(3rem,5vw,5rem);
-}
-.section-top .mono-label { margin-bottom: 1.25rem; }
-/* Heading bleeds right — nowrap + section overflow:hidden clips it */
+/* ── CONSULTING: single-column editorial layout ─────────── */
+/* Heading: 3 forced lines via <br>, massive scale */
 .consulting-hl {
-  white-space: nowrap;
-  font-size: clamp(4rem,9.5vw,11rem);
-  line-height: .92;
-  /* No left-rail constraint — spans full container width and beyond */
+  font-size: clamp(5rem, 12vw, 14rem);
+  line-height: .88;
+  letter-spacing: -.055em;
+  margin: clamp(1.25rem, 2.5vw, 2rem) 0 0;
 }
-/* Left rail now holds only results (no heading) — needs less height */
-#consulting .section-split-left { top: calc(var(--nav-h) + 1.5rem); }
+/* Results as a horizontal 4-col strip beneath the heading */
+.results-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin: clamp(2.5rem, 5vw, 4.5rem) 0;
+}
+.results-strip .result-item {
+  padding: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.75rem);
+  border-right: 1px solid var(--rule);
+}
+.results-strip .result-item:last-child { border-right: none; }
+/* Service list is now full-width — bump service h3 to match the scale */
+#consulting .service-list { width: 100%; }
+#consulting .service-row h3 { font-size: clamp(1.5rem, 2.5vw, 2.25rem); }
+
+@media (max-width: 860px) {
+  .results-strip { grid-template-columns: repeat(2, 1fr); }
+  .results-strip .result-item:nth-child(2) { border-right: none; }
+  .results-strip .result-item:nth-child(3) { border-top: 1px solid var(--rule); }
+  .results-strip .result-item:nth-child(4) { border-top: 1px solid var(--rule); border-right: none; }
+}
+@media (max-width: 480px) {
+  .results-strip { grid-template-columns: 1fr 1fr; }
+  .consulting-hl { font-size: clamp(3.5rem, 13vw, 5.5rem); }
+}
 
 /* ── AUDIT STRIP — full saturated blue panel ────────────── */
 .audit-strip {
@@ -702,12 +721,11 @@ a, button { cursor: none; }
 
 /* ── RESPONSIVE WILD OVERRIDES ──────────────────────────── */
 @media (max-width: 860px) {
-  .consulting-hl { white-space: normal; font-size: clamp(3rem,8vw,5rem); }
   .contact-hl    { white-space: normal; font-size: clamp(3.5rem,10vw,6rem); }
   .audit-hl      { font-size: clamp(2.5rem,7vw,4rem); }
   .audit-foot    { flex-direction: column; align-items: flex-start; }
   .audit-cta     { width: 100%; text-align: center; display: block; }
-  .hero-ambient  { display: none; } /* too cramped on mobile */
+  .hero-ambient  { display: none; }
 }
 @media (max-width: 640px) {
   .contact-hl { font-size: clamp(3rem,11vw,4.5rem); }
