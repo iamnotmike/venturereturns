@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Venture Returns | Consult. Build. Invest.</title>
-  <meta name="description" content="Venture Returns is a boutique firm operating across three verticals: software & management consulting, an AI-native venture studio, and a diversified investment arm." />
+  <title>Venture Returns | Boutique Consulting, Venture Studio &amp; Investment Firm</title>
+  <meta name="description" content="Venture Returns is a multi-disciplinary firm operating across software consulting, AI-native product development, and strategic investing." />
   <meta property="og:title" content="Venture Returns | Consult. Build. Invest." />
-  <meta property="og:description" content="Strategy consulting, AI-native software studio, and a diversified investment arm — built under one roof." />
+  <meta property="og:description" content="A boutique firm advising growth-stage companies, building AI-native software products, and deploying capital across early-stage startups, collectibles, and endurance sports." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://venturereturns.com/images/og.png" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c9a84c'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='15' font-weight='700' fill='%230d1b2a'%3EVR%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -43,28 +45,36 @@
   <!-- ── HERO ────────────────────────────────────────────── -->
   <section class="hero" id="hero">
     <div class="hero-bg"></div>
-    <div class="hero-deco" aria-hidden="true">
-      <div class="hero-deco-ring"></div>
-      <div class="hero-deco-ring"></div>
-      <div class="hero-deco-bar"></div>
-    </div>
+
+    <!-- Geometric SVG decoration -->
+    <svg class="hero-svg" aria-hidden="true" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="680" cy="180" r="260" stroke="rgba(201,168,76,0.06)" stroke-width="1"/>
+      <circle cx="680" cy="180" r="180" stroke="rgba(201,168,76,0.05)" stroke-width="1"/>
+      <circle cx="680" cy="180" r="100" stroke="rgba(201,168,76,0.07)" stroke-width="1"/>
+      <line x1="420" y1="180" x2="900" y2="180" stroke="rgba(201,168,76,0.04)" stroke-width="1"/>
+      <line x1="680" y1="0" x2="680" y2="700" stroke="rgba(201,168,76,0.04)" stroke-width="1"/>
+      <circle cx="680" cy="180" r="5" fill="rgba(201,168,76,0.3)"/>
+      <circle cx="500" cy="280" r="3" fill="rgba(201,168,76,0.2)"/>
+      <circle cx="760" cy="80" r="3" fill="rgba(201,168,76,0.2)"/>
+      <circle cx="820" cy="300" r="3" fill="rgba(201,168,76,0.15)"/>
+      <line x1="680" y1="180" x2="500" y2="280" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+      <line x1="680" y1="180" x2="760" y2="80" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+      <line x1="680" y1="180" x2="820" y2="300" stroke="rgba(201,168,76,0.06)" stroke-width="1"/>
+    </svg>
+
     <div class="container hero-content">
-      <p class="hero-eyebrow">Venture Returns</p>
+      <p class="hero-eyebrow">Boutique &nbsp;·&nbsp; Multi-Vertical &nbsp;·&nbsp; Operator-Led</p>
       <h1 class="hero-headline">
-        <span class="hl-word">Consult.</span>
-        <span class="hl-word hl-italic"><em>Build.</em></span>
-        <span class="hl-word">Invest.</span>
+        <span>Consult.</span>
+        <em>Build.</em>
+        <span>Invest.</span>
       </h1>
-      <p class="hero-sub">A boutique firm operating at the intersection of strategy, software, and capital — advising growing companies, building AI-native products, and deploying tactical investments.</p>
+      <p class="hero-sub">A multi-disciplinary firm operating across strategy consulting, AI-native software development, and diversified investing — three disciplines that compound one another.</p>
       <div class="hero-actions">
-        <a href="#consulting" class="btn btn-ghost">Explore the Firm</a>
-        <a href="#contact" class="btn btn-primary">Work With Us</a>
+        <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+        <a href="#pillars" class="btn btn-ghost">Explore the Firm</a>
       </div>
     </div>
-    <a href="#pillars" class="hero-scroll" aria-label="Scroll down">
-      <div class="hero-scroll-line"></div>
-      <span class="hero-scroll-text">Scroll</span>
-    </a>
   </section>
 
   <!-- ── THREE PILLARS ─────────────────────────────────── -->
@@ -72,35 +82,65 @@
     <div class="container pillars-grid">
 
       <a href="#consulting" class="pillar-card">
-        <div class="pillar-card-num">01</div>
-        <div class="pillar-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        <div class="pillar-card-header">
+          <span class="pillar-num">01</span>
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
         <h3>Consulting</h3>
-        <p>Software &amp; management consulting for startups and growth-stage companies — strategy, data, and go-to-market.</p>
-        <span class="pillar-card-cta">Learn more →</span>
+        <p>Software &amp; management consulting that moves at the pace of the companies we serve — rigorous strategy, hands-on execution.</p>
+        <span class="pillar-arrow">→</span>
       </a>
 
-      <a href="#studio" class="pillar-card pillar-card--accent">
-        <div class="pillar-card-num">02</div>
-        <div class="pillar-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 7h.01M11 7h6"/><path d="M7 11h2m2 0h6"/></svg>
+      <a href="#studio" class="pillar-card pillar-card--featured">
+        <div class="pillar-card-header">
+          <span class="pillar-num">02</span>
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8l2 2-2 2m5-4h3"/></svg>
         </div>
         <h3>Venture Studio</h3>
-        <p>An AI-native studio building a portfolio of consumer and B2B software products — from games to fintech to social.</p>
-        <span class="pillar-card-cta">See the portfolio →</span>
+        <p>An AI-native studio building a diversified portfolio of consumer and B2B software products across gaming, fintech, and social.</p>
+        <span class="pillar-arrow">→</span>
       </a>
 
       <a href="#investing" class="pillar-card">
-        <div class="pillar-card-num">03</div>
-        <div class="pillar-card-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        <div class="pillar-card-header">
+          <span class="pillar-num">03</span>
+          <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         </div>
         <h3>Investing</h3>
-        <p>Angel investments in early-stage startups, plus a curated approach to collectibles and endurance sports as alternative assets.</p>
-        <span class="pillar-card-cta">Learn more →</span>
+        <p>Tactical capital deployment across early-stage startups, curated collectibles, and the endurance sports category.</p>
+        <span class="pillar-arrow">→</span>
       </a>
 
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────── -->
+  <section class="about-firm section" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="section-label">The Firm</p>
+        <h2 class="section-heading">Built on a Single Premise</h2>
+        <p>The same analytical rigor and execution discipline that drives great consulting should also power great products and great investments. Venture Returns operates across three verticals that reinforce one another — insights from client engagements inform what we build, and what we build makes us better advisors and investors.</p>
+        <p>We don't separate strategy from execution. We work alongside teams through both, at startup speed, with institutional-grade frameworks.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Software products in active development or live</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Verticals served across consulting engagements</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">$10M+</span>
+          <span class="stat-label">In client marketing budgets managed and optimized</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Distinct investment categories under active deployment</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -108,10 +148,10 @@
   <section class="arm-section section" id="consulting">
     <div class="container">
       <div class="arm-header">
-        <div class="arm-header-text">
+        <div>
           <p class="section-label">01 &nbsp;·&nbsp; Consulting</p>
           <h2 class="section-heading">Software &amp; Management Consulting</h2>
-          <p class="section-sub">We bring the analytical rigor of major consulting firms to companies that can't afford to wait on large-firm timelines or fees. From first-customer acquisition to your next million users, we identify the highest-leverage opportunities and execute alongside your team.</p>
+          <p class="section-sub">We've helped companies acquire their first thousand customers and their next million. Engagements span acquisition strategy, data infrastructure, go-to-market execution, and operational efficiency — delivered by practitioners who have run these functions, not just advised on them.</p>
         </div>
       </div>
 
@@ -121,7 +161,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           </div>
           <h3>Growth Strategy</h3>
-          <p>Growth loops, acquisition channels, referral programs, and conversion optimization. We design the systems that compound.</p>
+          <p>Acquisition channels, referral programs, and conversion systems designed to compound. We identify the highest-leverage levers and build the roadmap to activate them.</p>
           <ul class="service-bullets">
             <li>Customer acquisition &amp; referral design</li>
             <li>Conversion rate optimization</li>
@@ -131,25 +171,25 @@
 
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8l3 3 2-2 4 4"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 8l3 3 2-2 4 4"/></svg>
           </div>
           <h3>Data &amp; Analytics</h3>
-          <p>Demand forecasting, attribution models, CLV analysis, and the KPI infrastructure to make faster, better decisions.</p>
+          <p>Forecasting models, attribution systems, and CLV frameworks that let leadership allocate resources with confidence rather than intuition.</p>
           <ul class="service-bullets">
             <li>Demand forecasting models</li>
-            <li>Marketing attribution</li>
-            <li>Dashboard &amp; reporting infrastructure</li>
+            <li>Multi-touch attribution</li>
+            <li>KPI dashboards &amp; reporting infrastructure</li>
           </ul>
         </div>
 
         <div class="service-card">
           <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v3l2 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v3l2 2"/></svg>
           </div>
           <h3>Digital Marketing &amp; SEO</h3>
-          <p>Organic and paid acquisition engines that generate compounding returns — from SEO architecture to affiliate programs.</p>
+          <p>Organic and paid acquisition engines built for compounding returns — SEO architecture, affiliate programs, and the content infrastructure to sustain both.</p>
           <ul class="service-bullets">
-            <li>SEO strategy &amp; optimization</li>
+            <li>SEO strategy &amp; on-page optimization</li>
             <li>Affiliate program development</li>
             <li>Campaign performance analysis</li>
           </ul>
@@ -160,11 +200,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
           <h3>Go-to-Market Strategy</h3>
-          <p>Market segmentation, pricing strategy, launch playbooks, and partnership development — built for your specific moment.</p>
+          <p>Market segmentation, pricing, launch sequencing, and distribution partnerships — tailored to your window of opportunity, not a generic playbook.</p>
           <ul class="service-bullets">
             <li>Market segmentation &amp; targeting</li>
-            <li>Launch playbooks</li>
-            <li>Partnership &amp; distribution strategy</li>
+            <li>Pricing &amp; packaging strategy</li>
+            <li>Partnership &amp; distribution development</li>
           </ul>
         </div>
 
@@ -173,11 +213,11 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
           <h3>Operations &amp; Cost Optimization</h3>
-          <p>Workflow audits, vendor renegotiation, and process automation that go directly to the bottom line.</p>
+          <p>Workflow audits, vendor renegotiation, and process automation that produce measurable margin improvement without compromising quality or capability.</p>
           <ul class="service-bullets">
-            <li>Supply chain &amp; procurement</li>
+            <li>Supply chain &amp; procurement analysis</li>
             <li>Vendor renegotiation strategy</li>
-            <li>Unit economics modeling</li>
+            <li>Unit economics &amp; margin modeling</li>
           </ul>
         </div>
 
@@ -186,7 +226,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
           <h3>Startup Advisory</h3>
-          <p>Strategic partnership for founders — prioritization frameworks, growth model design, fundraising narrative, and accelerator support.</p>
+          <p>Strategic partnership for founders navigating early-stage complexity — prioritization, growth model design, fundraising narrative, and accelerator-level counsel.</p>
           <ul class="service-bullets">
             <li>Product-market fit analysis</li>
             <li>Growth model design</li>
@@ -195,215 +235,224 @@
         </div>
       </div>
 
-      <!-- Consulting results bar -->
+      <!-- Results bar -->
       <div class="results-bar">
         <div class="results-bar-item">
           <span class="rb-metric">Billboard #2</span>
-          <span class="rb-label">Cross-promotion campaign, +1.2M Spotify followers</span>
+          <span class="rb-label">Cross-promotion campaign · Music industry</span>
         </div>
-        <div class="results-bar-divider"></div>
         <div class="results-bar-item">
-          <span class="rb-metric">81% spoilage ↓</span>
-          <span class="rb-label">Demand forecasting overhaul, restaurant chain</span>
+          <span class="rb-metric">81%</span>
+          <span class="rb-label">Spoilage reduction · Restaurant chain supply chain</span>
         </div>
-        <div class="results-bar-divider"></div>
         <div class="results-bar-item">
-          <span class="rb-metric">Top 3 Organic</span>
-          <span class="rb-label">SEO &amp; affiliate strategy, multiple verticals</span>
+          <span class="rb-metric">Top 3</span>
+          <span class="rb-label">Organic search placement · Multiple clients</span>
         </div>
-        <div class="results-bar-divider"></div>
         <div class="results-bar-item">
-          <span class="rb-metric">+60% Applicants</span>
-          <span class="rb-label">Venture accelerator advisory engagement</span>
+          <span class="rb-metric">+60%</span>
+          <span class="rb-label">Qualified applicants · Venture accelerator</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── VENTURE STUDIO ────────────────────────────────── -->
-  <section class="arm-section arm-section--dark section" id="studio">
+  <section class="arm-section arm-dark section" id="studio">
     <div class="container">
-      <div class="arm-header arm-header--light">
-        <div class="arm-header-text">
-          <p class="section-label">02 &nbsp;·&nbsp; Venture Studio</p>
-          <h2 class="section-heading">An AI-Native Product Studio</h2>
-          <p class="section-sub">We build consumer and B2B software products end-to-end using AI-accelerated development — compressing months of engineering into days. Our portfolio spans gaming, fintech, social, and productivity.</p>
+      <div class="arm-header">
+        <div>
+          <p class="section-label light-label">02 &nbsp;·&nbsp; Venture Studio</p>
+          <h2 class="section-heading light-heading">An AI-Native Product Studio</h2>
+          <p class="section-sub light-sub">We build software products end-to-end — from concept through architecture, design, and deployment — using AI-accelerated development to compress timelines by an order of magnitude. Twelve products across gaming, fintech, social, and productivity.</p>
         </div>
-        <div class="studio-badges">
-          <span class="badge badge--live">12 products</span>
-          <span class="badge badge--dev">AI-developed</span>
+        <div class="studio-meta">
+          <div class="studio-badge">
+            <span class="sb-num">5</span>
+            <span class="sb-label">Live</span>
+          </div>
+          <div class="studio-badge">
+            <span class="sb-num">7</span>
+            <span class="sb-label">In Dev</span>
+          </div>
         </div>
       </div>
 
       <div class="portfolio-grid">
 
-        <!-- Live products -->
-        <a href="https://playpuzzleclub.com" target="_blank" rel="noopener" class="product-card product-card--live">
-          <div class="product-card-img" style="background:#C24B28;">
-            <img src="images/puzzle-club.png" alt="Puzzle Club screenshot" loading="lazy" />
+        <a href="https://playpuzzleclub.com" target="_blank" rel="noopener" class="product-card">
+          <div class="product-img" style="--bg:#8B2500;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/puzzle-club.png" alt="Puzzle Club" loading="lazy" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Puzzle Club</h4>
-              <span class="badge badge--live">Live</span>
+              <span class="badge-live">Live</span>
             </div>
-            <p>Daily crossword-style word puzzles with streaks, progression, and a growing player community.</p>
-            <span class="product-url">playpuzzleclub.com ↗</span>
+            <p>Daily word puzzles with streaks, progression, and a growing player community.</p>
+            <span class="product-link">playpuzzleclub.com ↗</span>
           </div>
         </a>
 
-        <a href="https://wordsroyale.com" target="_blank" rel="noopener" class="product-card product-card--live">
-          <div class="product-card-img product-card-img--icon" style="background:#1a3d25;">
-            <img src="images/words-royale-icon.png" alt="Words Royale icon" loading="lazy" class="product-icon" />
+        <a href="https://wordsroyale.com" target="_blank" rel="noopener" class="product-card">
+          <div class="product-img product-img--icon" style="--bg:#162e1d;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/words-royale-icon.png" alt="Words Royale" loading="lazy" class="product-icon-img" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Words Royale</h4>
-              <span class="badge badge--live">Live</span>
+              <span class="badge-live">Live</span>
             </div>
-            <p>Real-time multiplayer word game — up to 8 players, 21×21 board, 200 tiles. Installable PWA.</p>
-            <span class="product-url">wordsroyale.com ↗</span>
+            <p>Real-time multiplayer word game — 8 players, 21×21 board, installable PWA.</p>
+            <span class="product-link">wordsroyale.com ↗</span>
           </div>
         </a>
 
-        <a href="https://fantasydues.app" target="_blank" rel="noopener" class="product-card product-card--live">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#1E6B42,#0f3d24);">
-            <span class="product-placeholder-letter">FD</span>
+        <a href="https://fantasydues.app" target="_blank" rel="noopener" class="product-card">
+          <div class="product-img product-img--placeholder" style="--bg:#0f3d25;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">FD</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Fantasy Dues</h4>
-              <span class="badge badge--live">Live</span>
+              <span class="badge-live">Live</span>
             </div>
-            <p>Financial back office for fantasy sports leagues — collect dues, vote on payouts, pay winners.</p>
-            <span class="product-url">fantasydues.app ↗</span>
+            <p>Financial back office for fantasy leagues — dues, payouts, and tournament management.</p>
+            <span class="product-link">fantasydues.app ↗</span>
           </div>
         </a>
 
-        <a href="https://triathlontribe.com" target="_blank" rel="noopener" class="product-card product-card--live">
-          <div class="product-card-img" style="background:#1a3d5c;">
-            <img src="images/triathlon-tribe.png" alt="Triathlon Tribe screenshot" loading="lazy" />
+        <a href="https://triathlontribe.com" target="_blank" rel="noopener" class="product-card">
+          <div class="product-img" style="--bg:#0d2540;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/triathlon-tribe.png" alt="Triathlon Tribe" loading="lazy" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Triathlon Tribe</h4>
-              <span class="badge badge--live">Live</span>
+              <span class="badge-live">Live</span>
             </div>
-            <p>Social platform for triathletes — training, events, and a community built around the sport.</p>
-            <span class="product-url">triathlontribe.com ↗</span>
+            <p>Social platform for triathletes — training, events, and community built around the sport.</p>
+            <span class="product-link">triathlontribe.com ↗</span>
           </div>
         </a>
 
-        <a href="https://overclocktcg.com" target="_blank" rel="noopener" class="product-card product-card--live">
-          <div class="product-card-img" style="background:#1a0d33;">
-            <img src="images/overclock-tcg.png" alt="Overclock TCG screenshot" loading="lazy" />
+        <a href="https://overclocktcg.com" target="_blank" rel="noopener" class="product-card">
+          <div class="product-img" style="--bg:#130826;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/overclock-tcg.png" alt="Overclock TCG" loading="lazy" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Overclock TCG</h4>
-              <span class="badge badge--live">Live</span>
+              <span class="badge-live">Live</span>
             </div>
-            <p>Tactical robot trading card game — build decks, command units on a 5×5 grid, battle adaptive AI.</p>
-            <span class="product-url">overclocktcg.com ↗</span>
+            <p>Tactical robot trading card game — deck building, 5×5 grid combat, adaptive AI.</p>
+            <span class="product-link">overclocktcg.com ↗</span>
           </div>
         </a>
 
         <div class="product-card">
-          <div class="product-card-img" style="background:#060e1a;">
-            <img src="images/fathomfall.png" alt="Fathomfall screenshot" loading="lazy" />
+          <div class="product-img" style="--bg:#04101e;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/fathomfall.png" alt="Fathomfall" loading="lazy" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Fathomfall</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Social-deduction battle royale — a shrinking abyss, 100 divers, one killer. Solve the mystery before the deep crushes everyone.</p>
+            <p>Social-deduction battle royale — a shrinking abyss, 100 divers, one killer. Solve the mystery before the deep wins.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img" style="background:#0f1f1a;">
-            <img src="images/arcsevera.png" alt="Arcsevera screenshot" loading="lazy" />
+          <div class="product-img" style="--bg:#0a1a10;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <img src="images/arcsevera.png" alt="Arcsevera" loading="lazy" />
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Arcsevera</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Dark-fantasy creature-collection RPG with Smash Bros-style realtime combat — 85 creatures, 10 Arc types, offline-capable PWA.</p>
+            <p>Dark-fantasy creature-collection RPG with realtime combat — 85 creatures, 10 Arc types, offline-capable PWA.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#1a2e4a,#0d1b2a);">
-            <span class="product-placeholder-letter">SV</span>
+          <div class="product-img product-img--placeholder" style="--bg:#0d1a36;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">SV</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Starlane: Voidrunners</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Real-time ELO-ranked 16-ship elimination space racer for mobile — one thumb, earn-only upgrades, competitive economy.</p>
+            <p>ELO-ranked 16-ship elimination space racer for mobile — one-thumb controls, competitive economy.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#2a1a3e,#160d24);">
-            <span class="product-placeholder-letter">UC</span>
+          <div class="product-img product-img--placeholder" style="--bg:#1a0d2e;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">UC</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Undercurrent</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Privacy-first voice reflection app — talk daily, watch patterns emerge. On-device AI ensures your words never leave your phone.</p>
+            <p>Voice-first daily reflection app with on-device AI — talk daily, surface patterns, complete privacy.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#3a1a1a,#1f0f0f);">
-            <span class="product-placeholder-letter">CV</span>
+          <div class="product-img product-img--placeholder" style="--bg:#2a1212;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">CV</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Couple Vault</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>The secure operating system for two people building a life together — shared daily loop, encrypted vault, zero-knowledge privacy.</p>
+            <p>Encrypted operating system for two — shared daily loop and zero-knowledge vault for sensitive data.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#0d2040,#06101e);">
-            <span class="product-placeholder-letter">WC</span>
+          <div class="product-img product-img--placeholder" style="--bg:#0d2030;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">WC</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Waycairn</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Personal CRM fused with a travel map — keep relationships warm and get notified when your worlds serendipitously overlap.</p>
+            <p>Personal CRM fused with a travel map — relationship intelligence and serendipitous connection alerts.</p>
           </div>
         </div>
 
         <div class="product-card">
-          <div class="product-card-img product-card-img--placeholder" style="background:linear-gradient(135deg,#0a1a40,#060e24);">
-            <span class="product-placeholder-letter">CC</span>
+          <div class="product-img product-img--placeholder" style="--bg:#081430;">
+            <div class="browser-chrome"><span></span><span></span><span></span></div>
+            <span class="product-mono">CC</span>
           </div>
-          <div class="product-card-body">
-            <div class="product-card-top">
+          <div class="product-body">
+            <div class="product-top">
               <h4>Credit Card Calendar</h4>
-              <span class="badge badge--dev">In Development</span>
+              <span class="badge-dev">In Dev</span>
             </div>
-            <p>Never let a credit card benefit expire unused — a calendar layer that tracks statement credits, perks, and reset schedules.</p>
+            <p>A calendar layer for credit card benefits — track statement credits, perks, and reset schedules automatically.</p>
           </div>
         </div>
 
-      </div><!-- /portfolio-grid -->
-
-      <div class="studio-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        Every product in this portfolio was designed, engineered, and shipped using AI-accelerated development — compressing traditional timelines by an order of magnitude.
       </div>
     </div>
   </section>
@@ -412,53 +461,47 @@
   <section class="arm-section section" id="investing">
     <div class="container">
       <div class="arm-header">
-        <div class="arm-header-text">
+        <div>
           <p class="section-label">03 &nbsp;·&nbsp; Investing</p>
           <h2 class="section-heading">A Diversified Investment Arm</h2>
-          <p class="section-sub">Capital deployed across three categories where we have genuine edge — early-stage startups where we can add operational value, curated collectibles with strong fundamentals, and endurance sports as both an asset class and a personal conviction.</p>
+          <p class="section-sub">Capital deployed across three categories where the firm has genuine domain depth — not passive allocation, but active conviction backed by operational expertise and pattern recognition built across thousands of hours in each space.</p>
         </div>
       </div>
 
       <div class="investing-grid">
 
         <div class="invest-card">
-          <div class="invest-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
+          <div class="invest-num">01</div>
           <h3>Angel Investments</h3>
-          <p>Early-stage checks in B2C and fintech startups where we can contribute more than capital — strategic guidance, product intuition, growth frameworks, and network access earned across nine years of building and advising.</p>
+          <p>Pre-seed and seed capital in consumer software and fintech — paired with hands-on strategic partnership. We engage on growth architecture, product roadmap, and go-to-market from the first check, not just the board meeting.</p>
           <ul class="invest-bullets">
             <li>Pre-seed and seed stage</li>
-            <li>B2C, fintech, and consumer software</li>
-            <li>Founder-operator support alongside capital</li>
-            <li>Network introductions and go-to-market counsel</li>
+            <li>Consumer software &amp; fintech focus</li>
+            <li>Operational partnership alongside capital</li>
+            <li>Growth, product, and GTM counsel from day one</li>
           </ul>
         </div>
 
         <div class="invest-card">
-          <div class="invest-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-          </div>
+          <div class="invest-num">02</div>
           <h3>Collectibles</h3>
-          <p>A curated approach to tangible assets with strong cultural cachet and long-term appreciation potential. We apply the same analytical rigor to collectibles markets as we do to business strategy — identifying undervalued assets with durable fundamentals.</p>
+          <p>A data-driven approach to tangible assets. The same analytical frameworks applied to business strategy are used to identify undervalued collectibles with durable fundamentals — focusing on liquidity cycles, category tailwinds, and long-horizon appreciation.</p>
           <ul class="invest-bullets">
-            <li>Sports trading cards and memorabilia</li>
-            <li>Data-driven acquisition and valuation</li>
-            <li>Long-term hold strategy with selective liquidity</li>
-            <li>Category expertise: sports, gaming, and culture</li>
+            <li>Sports trading cards &amp; memorabilia</li>
+            <li>Gaming &amp; cultural artifacts</li>
+            <li>Quantitative acquisition &amp; valuation approach</li>
+            <li>Long-hold with selective liquidity windows</li>
           </ul>
         </div>
 
         <div class="invest-card">
-          <div class="invest-card-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
+          <div class="invest-num">03</div>
           <h3>Endurance Sports</h3>
-          <p>We invest where we compete. As an Ironman finisher, Maccabiah Games Team USA athlete, and age-group national qualifier, we bring firsthand credibility to backing the endurance sports category — events, technology, and gear that powers serious athletes.</p>
+          <p>A category-specific thesis in a $50B+ market growing at the intersection of performance technology, community platforms, and event infrastructure. We back founders building the tools, experiences, and data layers that power serious athletes.</p>
           <ul class="invest-bullets">
-            <li>Endurance event platforms and tech</li>
-            <li>Athlete performance and recovery tools</li>
-            <li>Triathlon, running, and cycling verticals</li>
+            <li>Triathlon, running, cycling &amp; open-water</li>
+            <li>Performance &amp; recovery technology</li>
+            <li>Event platforms &amp; community infrastructure</li>
             <li>Athlete-founder partnerships</li>
           </ul>
         </div>
@@ -467,44 +510,14 @@
     </div>
   </section>
 
-  <!-- ── APPROACH ───────────────────────────────────────── -->
-  <section class="approach arm-section--mid section" id="approach">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label">How We Work</p>
-        <h2 class="section-heading">Operators First. Always.</h2>
-        <p class="section-sub">Whether we're advising a client, shipping a product, or writing a check — we bring the same data-first, ownership-oriented mindset to everything we do.</p>
+  <!-- ── PRE-FOOTER CTA ─────────────────────────────────── -->
+  <section class="cta-band">
+    <div class="container cta-band-inner">
+      <div class="cta-band-text">
+        <h2>Three ways to work together.</h2>
+        <p>Consulting engagement, studio partnership, or investment conversation — we're interested in all three.</p>
       </div>
-      <div class="approach-steps">
-        <div class="step">
-          <div class="step-num-wrap"><div class="step-number">01</div></div>
-          <div class="step-content">
-            <h3>Diagnose</h3>
-            <p>We start with an honest read of the data, the market, and the competitive position — before any recommendations are made.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num-wrap"><div class="step-number">02</div></div>
-          <div class="step-content">
-            <h3>Design</h3>
-            <p>Strategy tailored to your specific context — not generic playbooks. Frameworks are proven, application is always bespoke.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num-wrap"><div class="step-number">03</div></div>
-          <div class="step-content">
-            <h3>Execute</h3>
-            <p>We stay in the room. We work alongside your team, unblock obstacles, and iterate quickly — strategy without execution is just a document.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num-wrap"><div class="step-number">04</div></div>
-          <div class="step-content">
-            <h3>Institutionalize</h3>
-            <p>Before we leave, your team can own what we built. We document, train, and set up infrastructure for sustained results.</p>
-          </div>
-        </div>
-      </div>
+      <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
     </div>
   </section>
 
@@ -513,19 +526,19 @@
     <div class="container contact-inner">
       <div class="contact-text">
         <p class="section-label">Contact</p>
-        <h2 class="section-heading">Let's Talk</h2>
-        <p>Whether you're looking for a consulting partner, considering an investment conversation, or want to know more about the studio — we'd love to hear from you. We respond within one business day.</p>
+        <h2 class="section-heading">Start a Conversation</h2>
+        <p>Tell us what you're working on. We'll respond within one business day.</p>
         <div class="contact-details">
           <div class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="mailto:hello@venturereturns.com">hello@venturereturns.com</a>
           </div>
           <div class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <span>St. Louis, MO &nbsp;·&nbsp; SF Bay Area, CA &nbsp;·&nbsp; Remote</span>
           </div>
           <div class="contact-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="20" height="20"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" width="18" height="18"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             <a href="https://www.linkedin.com/company/venture-returns-consulting-group/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
@@ -567,8 +580,8 @@
         <button type="submit" class="btn btn-primary btn-full" data-fs-submit-btn>Send Message</button>
         <p class="form-note">We respond within one business day.</p>
         <div data-fs-success class="form-success" role="alert">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          <span>Message sent! We'll be in touch soon.</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <span>Message sent. We'll be in touch soon.</span>
         </div>
       </form>
     </div>
@@ -581,16 +594,14 @@
         <span class="logo-mark">VR</span>
         <span class="logo-name">Venture Returns</span>
       </div>
-      <div class="footer-center">
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#consulting">Consulting</a>
-          <a href="#studio">Studio</a>
-          <a href="#investing">Investing</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <p class="footer-tagline">Consult. Build. Invest.</p>
-      </div>
-      <p class="footer-copy">&copy; <span id="year"></span> Venture Returns<br/>Consulting Group</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#consulting">Consulting</a>
+        <a href="#studio">Studio</a>
+        <a href="#investing">Investing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; <span id="year"></span> Venture Returns Consulting Group</p>
     </div>
   </footer>
 
