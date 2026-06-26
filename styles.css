@@ -1,16 +1,16 @@
 /* ── TOKENS ─────────────────────────────────────────────── */
 :root {
-  --bg:    #0d0d0d;
-  --bg-2:  #141414;
-  --bg-3:  #1c1c1c;
+  --bg:    #161616;
+  --bg-2:  #1e1e1e;
+  --bg-3:  #272727;
   --fg:    #fff;
   --fg-2:  rgba(255,255,255,.5);
-  --fg-3:  rgba(255,255,255,.46);  /* min 4.5:1 on #000 */
+  --fg-3:  rgba(255,255,255,.46);  /* min 4.5:1 on #161616 */
   --fg-4:  rgba(255,255,255,.1);   /* decorative only — never use for readable text */
-  --rule:  rgba(255,255,255,.07);
-  --blue:  #4f8cff;
-  --lime:  #c8ff47;
-  --amber: #f0a832;
+  --rule:  rgba(255,255,255,.08);
+  --blue:  #6b9fff;
+  --lime:  #3dfcc7;
+  --amber: #ffaa3c;
 
   --nav-h: 60px;
   --max:   1200px;
@@ -428,13 +428,13 @@ a.product-row:hover .pr-name { color:var(--fg); }
 
 /* Studio → lime */
 #studio .mono-label   { color:var(--lime); }
-.pr-status.live       { color:rgba(200,255,71,.7); }
+.pr-status.live       { color:rgba(61,252,199,.75); }
 a.product-row:hover .pr-name { color:var(--lime); }
 
 /* Investing → amber */
 #investing .mono-label   { color:var(--amber); }
 #investing .invest-num   { color:var(--amber); }
-#investing .invest-col li::before { color:rgba(240,168,50,.45); }
+#investing .invest-col li::before { color:rgba(255,170,60,.45); }
 
 /* ── REVEAL ─────────────────────────────────────────────── */
 .reveal {
