@@ -76,4 +76,23 @@ const sectionIO = new IntersectionObserver((entries) => {
 
 sections.forEach(s => sectionIO.observe(s));
 
+// Custom cursor
+const cursor = document.querySelector('.cursor');
+if (cursor) {
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  }, { passive: true });
+
+  const hoverEls = document.querySelectorAll('a, button, .service-row, .product-row, .invest-col');
+  hoverEls.forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
+  });
+
+  // Hide cursor when it leaves the window
+  document.addEventListener('mouseleave', () => cursor.style.opacity = '0');
+  document.addEventListener('mouseenter', () => cursor.style.opacity = '1');
+}
+
 // Form submission handled by @formspree/ajax

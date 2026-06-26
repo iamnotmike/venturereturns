@@ -570,3 +570,145 @@ a.product-row:hover .pr-name { color:var(--lime); }
   .stats-bar-item:last-child { border-bottom:none; }
   .results-col { grid-template-columns:1fr; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   WILD LAYER — cursor, marquee, ambient, bleeding headline,
+   blue audit panel, oversized contact
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── CUSTOM CURSOR ──────────────────────────────────────── */
+body { cursor: none; }
+a, button { cursor: none; }
+.cursor {
+  position: fixed; top: 0; left: 0;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: #fff; pointer-events: none;
+  z-index: 99999;
+  transition: width .22s var(--ease), height .22s var(--ease), background .22s, border .22s;
+  mix-blend-mode: difference;
+  will-change: left, top;
+}
+.cursor.is-hovering {
+  width: 48px; height: 48px;
+  background: transparent;
+  border: 1.5px solid #fff;
+}
+
+/* ── HERO AMBIENT (outline VR) ──────────────────────────── */
+.hero-inner { position: relative; }
+.hero-ambient {
+  position: absolute;
+  right: -0.06em; bottom: -0.08em;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(22rem, 42vw, 52rem);
+  font-weight: 900; line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,255,255,.055);
+  pointer-events: none; user-select: none;
+  letter-spacing: -.06em; z-index: 0;
+}
+.hero-hl, .hero-floor { position: relative; z-index: 1; }
+
+/* ── MARQUEE BELT ───────────────────────────────────────── */
+@keyframes marquee     { to { transform: translateX(-50%); } }
+@keyframes marquee-rev { to { transform: translateX(50%); } }
+
+.marquee-belt {
+  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--bg);
+}
+.marquee-belt--sm { border:none; margin-bottom: clamp(2rem,4vw,3rem); }
+
+.marquee-track {
+  display: inline-flex; align-items: center;
+  gap: clamp(1.5rem,2.5vw,2.5rem);
+  white-space: nowrap;
+  padding: 1rem 0;
+  animation: marquee 22s linear infinite;
+}
+.marquee-track--rev { animation: marquee-rev 28s linear infinite; }
+
+.marquee-track span {
+  font-size: clamp(1.1rem,2vw,1.75rem);
+  font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(255,255,255,.28);
+}
+.marquee-track .mdot {
+  color: var(--blue); font-weight: 900; font-size: 1.1em;
+}
+.marquee-belt--sm .marquee-track span {
+  font-size: clamp(.9rem,1.5vw,1.3rem);
+  font-weight: 500; letter-spacing: .05em;
+  text-transform: none; color: rgba(255,255,255,.22);
+}
+.marquee-belt--sm .marquee-track .mdot { color: var(--lime); }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .marquee-track--rev { animation: none; }
+}
+
+/* ── CONSULTING: full-width heading above split ─────────── */
+.section-top {
+  margin-bottom: clamp(3rem,5vw,5rem);
+}
+.section-top .mono-label { margin-bottom: 1.25rem; }
+/* Heading bleeds right — nowrap + section overflow:hidden clips it */
+.consulting-hl {
+  white-space: nowrap;
+  font-size: clamp(4rem,9.5vw,11rem);
+  line-height: .92;
+  /* No left-rail constraint — spans full container width and beyond */
+}
+/* Left rail now holds only results (no heading) — needs less height */
+#consulting .section-split-left { top: calc(var(--nav-h) + 1.5rem); }
+
+/* ── AUDIT STRIP — full saturated blue panel ────────────── */
+.audit-strip {
+  background: var(--blue);
+  border: none;
+  padding: clamp(4.5rem,9vw,8rem) 0;
+}
+.audit-strip-inner {
+  max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+  display: flex; flex-direction: column; gap: clamp(2rem,4vw,3rem);
+}
+.audit-strip .mono-label { color: rgba(0,0,20,.45); margin-bottom: .75rem; }
+.audit-hl {
+  font-size: clamp(2.75rem,7vw,8rem);
+  font-weight: 800; letter-spacing: -.05em; line-height: .95;
+  color: #000; text-wrap: balance;
+  margin-bottom: 0;
+}
+.audit-foot {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 2rem; flex-wrap: wrap;
+}
+.audit-sub { color: rgba(0,0,20,.6); max-width: none; }
+.audit-cta {
+  background: #000; color: var(--blue);
+  border-radius: 2px;
+}
+.audit-cta:hover { opacity: .82; transform: translateY(-1px); }
+
+/* ── CONTACT: oversized "Let's talk." ──────────────────── */
+.contact-hl {
+  font-size: clamp(5rem,12vw,13rem);
+  letter-spacing: -.05em; line-height: .9;
+  margin-bottom: clamp(2rem,4vw,3.5rem);
+  white-space: nowrap;
+}
+
+/* ── RESPONSIVE WILD OVERRIDES ──────────────────────────── */
+@media (max-width: 860px) {
+  .consulting-hl { white-space: normal; font-size: clamp(3rem,8vw,5rem); }
+  .contact-hl    { white-space: normal; font-size: clamp(3.5rem,10vw,6rem); }
+  .audit-hl      { font-size: clamp(2.5rem,7vw,4rem); }
+  .audit-foot    { flex-direction: column; align-items: flex-start; }
+  .audit-cta     { width: 100%; text-align: center; display: block; }
+  .hero-ambient  { display: none; } /* too cramped on mobile */
+}
+@media (max-width: 640px) {
+  .contact-hl { font-size: clamp(3rem,11vw,4.5rem); }
+}

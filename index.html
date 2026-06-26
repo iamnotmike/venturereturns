@@ -63,6 +63,7 @@
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
@@ -94,6 +95,7 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-inner">
+      <div class="hero-ambient" aria-hidden="true">VR</div>
       <h1 class="hero-hl">
         <span class="hl-line" style="--i:0"><span class="hl-inner hl-blue">Consult.</span></span>
         <span class="hl-line" style="--i:1"><span class="hl-inner hl-lime"><em>Build.</em></span></span>
@@ -129,14 +131,24 @@
     </div>
   </div>
 
+  <!-- MARQUEE BELT -->
+  <div class="marquee-belt" aria-hidden="true">
+    <div class="marquee-track">
+      <span>CONSULT</span><span class="mdot">·</span><span>BUILD</span><span class="mdot">·</span><span>INVEST</span><span class="mdot">·</span><span>CONSULT</span><span class="mdot">·</span><span>BUILD</span><span class="mdot">·</span><span>INVEST</span><span class="mdot">·</span><span>CONSULT</span><span class="mdot">·</span><span>BUILD</span><span class="mdot">·</span><span>INVEST</span><span class="mdot">·</span><span>CONSULT</span><span class="mdot">·</span><span>BUILD</span><span class="mdot">·</span><span>INVEST</span><span class="mdot">·</span>
+    </div>
+  </div>
+
   <!-- CONSULTING -->
   <section class="section-block" id="consulting" data-num="01">
     <div class="section-block-inner">
+      <div class="section-top">
+        <p class="mono-label">01 — Consulting</p>
+        <h2 class="section-hl consulting-hl">Software &amp; management consulting.</h2>
+      </div>
+
       <div class="section-split">
 
         <div class="section-split-left">
-          <p class="mono-label">01 — Consulting</p>
-          <h2 class="section-hl">Software &amp; management consulting.</h2>
           <div class="results-col">
             <div class="result-item">
               <span class="result-metric">Billboard #2</span>
@@ -197,6 +209,12 @@
           <h2 class="section-hl">An AI-native<br>product studio.</h2>
         </div>
         <p class="studio-desc">Twelve products across gaming, fintech, social, and productivity — built end-to-end using AI-accelerated development to compress timelines by an order of magnitude.</p>
+      </div>
+
+      <div class="marquee-belt marquee-belt--sm" aria-hidden="true">
+        <div class="marquee-track marquee-track--rev">
+          <span>Fantasy Dues</span><span class="mdot">·</span><span>Puzzle Club</span><span class="mdot">·</span><span>Words Royale</span><span class="mdot">·</span><span>Overclock TCG</span><span class="mdot">·</span><span>Arcsevera</span><span class="mdot">·</span><span>Fathomfall</span><span class="mdot">·</span><span>Starlane: Voidrunners</span><span class="mdot">·</span><span>Undercurrent</span><span class="mdot">·</span><span>Waycairn</span><span class="mdot">·</span><span>Triathlon Tribe</span><span class="mdot">·</span><span>Couple Vault</span><span class="mdot">·</span><span>Credit Card Calendar</span><span class="mdot">·</span><span>Fantasy Dues</span><span class="mdot">·</span><span>Puzzle Club</span><span class="mdot">·</span><span>Words Royale</span><span class="mdot">·</span><span>Overclock TCG</span><span class="mdot">·</span><span>Arcsevera</span><span class="mdot">·</span><span>Fathomfall</span><span class="mdot">·</span><span>Starlane: Voidrunners</span><span class="mdot">·</span><span>Undercurrent</span><span class="mdot">·</span><span>Waycairn</span><span class="mdot">·</span><span>Triathlon Tribe</span><span class="mdot">·</span><span>Couple Vault</span><span class="mdot">·</span><span>Credit Card Calendar</span><span class="mdot">·</span>
+        </div>
       </div>
 
       <div class="product-table">
@@ -334,12 +352,12 @@
   <!-- AUDIT CTA STRIP -->
   <section class="audit-strip" id="audit">
     <div class="audit-strip-inner">
-      <div class="audit-copy">
-        <p class="mono-label">Free offer</p>
-        <h2 class="audit-hl">Not sure where your growth is stalling?</h2>
-        <p class="audit-sub">Book a free 30-minute growth audit. We'll pinpoint your highest-leverage opportunity — no deck, no retainer pitch, no obligation.</p>
+      <p class="mono-label">Free offer</p>
+      <h2 class="audit-hl">Not sure where your growth is stalling?</h2>
+      <div class="audit-foot">
+        <p class="audit-sub">30 minutes. No deck. No pitch. No obligation.</p>
+        <a href="#contact" class="audit-cta" onclick="document.getElementById('interest').value='Free 30-min growth audit'">Book your free audit →</a>
       </div>
-      <a href="#contact" class="audit-cta" onclick="document.getElementById('interest').value='Free 30-min growth audit'">Book your free audit →</a>
     </div>
   </section>
 
@@ -348,8 +366,7 @@
     <div class="section-block-inner contact-inner">
       <div class="contact-left">
         <p class="mono-label">Contact</p>
-        <h2 class="section-hl">Let's talk.</h2>
-        <p class="section-desc">Tell us what you're working on. We respond within one business day.</p>
+        <h2 class="section-hl contact-hl">Let's<br>talk.</h2>
         <div class="contact-details">
           <a href="mailto:hello@venturereturns.com">hello@venturereturns.com</a>
           <span>St. Louis, MO · SF Bay Area · Remote</span>
