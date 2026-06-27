@@ -97,6 +97,50 @@ if (cursor) {
 
 // Form submission handled by @formspree/ajax
 
+// Parallax depth on ghost section numerals (--p = how far scrolled into section)
+(function () {
+  const pSections = ['consulting', 'studio', 'investing']
+    .map(id => document.getElementById(id)).filter(Boolean);
+  function tick() {
+    pSections.forEach(el => {
+      el.style.setProperty('--p', `${-el.getBoundingClientRect().top}px`);
+    });
+  }
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
+})();
+
+// Cursor accent color shifts per section
+(function () {
+  const cur = document.querySelector('.cursor');
+  if (!cur || !matchMedia('(pointer: fine)').matches) return;
+  const acc = { consulting: '#6b9fff', studio: '#3dfcc7', investing: '#ffaa3c' };
+  document.addEventListener('mousemove', e => {
+    const id = document.elementFromPoint(e.clientX, e.clientY)?.closest('section[id]')?.id;
+    cur.style.setProperty('--cursor-color', acc[id] || '#ffffff');
+  }, { passive: true });
+})();
+
+// Stats bar progress bars — fill width animates in sync with count-up
+(function () {
+  document.querySelectorAll('.stats-bar-item').forEach(item => {
+    const bar = document.createElement('div');
+    bar.className = 'sbn-bar';
+    bar.innerHTML = '<div class="sbn-bar-fill"></div>';
+    item.appendChild(bar);
+  });
+
+  const barIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      requestAnimationFrame(() => e.target.querySelector('.sbn-bar-fill')?.classList.add('active'));
+      barIO.unobserve(e.target);
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.stats-bar-item').forEach(el => barIO.observe(el));
+})();
+
 // Section heading line-reveal — split on <br>, wrap each line, reveal on scroll
 (function () {
   document.querySelectorAll('.section-hl').forEach(el => {

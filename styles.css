@@ -577,6 +577,36 @@ a.product-row:hover .pr-name { color:var(--lime); }
    blue audit panel, oversized contact
    ═══════════════════════════════════════════════════════════ */
 
+/* ── CURSOR COLOR SHIFT (section accent via JS --cursor-color) ─ */
+.cursor { background: var(--cursor-color, #fff); }
+.cursor.is-hovering { border-color: var(--cursor-color, #fff); }
+
+/* ── STATS BAR PROGRESS FILL ────────────────────────────── */
+.sbn-bar {
+  height: 1px;
+  background: rgba(255,255,255,.07);
+  margin-top: .875rem;
+  overflow: hidden;
+}
+.sbn-bar-fill {
+  height: 100%;
+  width: 0;
+  background: rgba(255,255,255,.5);
+  transition: width 1.4s cubic-bezier(0.16,1,0.3,1);
+}
+.sbn-bar-fill.active { width: 100%; }
+
+/* ── CONTACT HEADING: "talk." tri-color gradient ────────── */
+/* After line-split JS runs, targets the last .line-wrap (talk.) */
+.contact-hl { position: relative; }
+.contact-hl .line-wrap:last-child .line-inner {
+  background: linear-gradient(90deg, var(--blue) 0%, var(--lime) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
 /* ── CUSTOM CURSOR ──────────────────────────────────────── */
 /* Only hide system cursor on true pointer devices */
 @media (pointer: fine) {
@@ -678,6 +708,12 @@ a.product-row:hover .pr-name { color:var(--lime); }
 }
 .results-strip .result-item:last-child { border-right: none; }
 /* Service list overrides live in the HORIZONTAL SCROLL TICKER block below */
+
+/* ── PARALLAX GHOST NUMERALS ────────────────────────────── */
+/* --p is set per-section via JS; multiplier ~0.12 for subtle depth */
+#consulting::before,
+#studio::before,
+#investing::before { transform: translateY(calc(var(--p, 0px) * 0.12)); }
 
 @media (max-width: 860px) {
   .results-strip { grid-template-columns: repeat(2, 1fr); }
