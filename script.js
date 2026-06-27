@@ -96,3 +96,51 @@ if (cursor) {
 }
 
 // Form submission handled by @formspree/ajax
+
+// Section heading line-reveal — split on <br>, wrap each line, reveal on scroll
+(function () {
+  document.querySelectorAll('.section-hl').forEach(el => {
+    const lines = el.innerHTML.trim().split(/<br\s*\/?>/i);
+    el.innerHTML = lines.map(line =>
+      `<span class="line-wrap"><span class="line-inner">${line.trim()}</span></span>`
+    ).join('');
+  });
+
+  const headingIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('lines-in');
+      headingIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.section-hl').forEach(el => headingIO.observe(el));
+})();
+
+// Count-up animation for stats and result metrics
+(function () {
+  function countUp(el) {
+    const target = +el.dataset.count;
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 1400;
+    const start = performance.now();
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    function tick(now) {
+      const t = Math.min((now - start) / duration, 1);
+      el.textContent = prefix + Math.round(ease(t) * target) + suffix;
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      countUp(entry.target);
+      countIO.unobserve(entry.target);
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('[data-count]').forEach(el => countIO.observe(el));
+})();
