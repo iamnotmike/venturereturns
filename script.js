@@ -110,15 +110,24 @@ if (cursor) {
   tick();
 })();
 
-// Cursor accent color shifts per section
+// Cursor accent color shifts per section — set backgroundColor directly (CSS var
+// doesn't override mix-blend-mode context reliably; inline style always wins)
 (function () {
   const cur = document.querySelector('.cursor');
   if (!cur || !matchMedia('(pointer: fine)').matches) return;
   const acc = { consulting: '#6b9fff', studio: '#3dfcc7', investing: '#ffaa3c' };
+  let accentColor = '#fff';
   document.addEventListener('mousemove', e => {
     const id = document.elementFromPoint(e.clientX, e.clientY)?.closest('section[id]')?.id;
-    cur.style.setProperty('--cursor-color', acc[id] || '#ffffff');
+    accentColor = acc[id] || '#fff';
+    if (!cur.classList.contains('is-hovering')) cur.style.backgroundColor = accentColor;
+    cur.style.borderColor = accentColor;
   }, { passive: true });
+  // Keep accent on hover state (transparent bg, accent border)
+  cur.addEventListener('transitionstart', () => {
+    if (cur.classList.contains('is-hovering')) cur.style.backgroundColor = 'transparent';
+    else cur.style.backgroundColor = accentColor;
+  });
 })();
 
 // Stats bar progress bars — fill width animates in sync with count-up
@@ -156,7 +165,7 @@ if (cursor) {
       entry.target.classList.add('lines-in');
       headingIO.unobserve(entry.target);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.05 });
 
   document.querySelectorAll('.section-hl').forEach(el => headingIO.observe(el));
 })();

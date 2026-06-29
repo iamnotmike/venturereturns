@@ -577,10 +577,6 @@ a.product-row:hover .pr-name { color:var(--lime); }
    blue audit panel, oversized contact
    ═══════════════════════════════════════════════════════════ */
 
-/* ── CURSOR COLOR SHIFT (section accent via JS --cursor-color) ─ */
-.cursor { background: var(--cursor-color, #fff); }
-.cursor.is-hovering { border-color: var(--cursor-color, #fff); }
-
 /* ── STATS BAR PROGRESS FILL ────────────────────────────── */
 .sbn-bar {
   height: 1px;
@@ -631,6 +627,10 @@ a.product-row:hover .pr-name { color:var(--lime); }
   background: transparent;
   border: 1.5px solid #fff;
 }
+/* Cursor accent color — JS sets --cursor-color per section; placed AFTER
+   the main .cursor rule so this override wins the cascade */
+.cursor { background: var(--cursor-color, #fff); }
+.cursor.is-hovering { border-color: var(--cursor-color, #fff); }
 
 /* ── HERO AMBIENT (outline VR) ──────────────────────────── */
 .hero-inner { position: relative; }
@@ -858,3 +858,9 @@ a.product-row:hover .pr-name { color:var(--lime); }
 #consulting .service-row p  { max-height: none; opacity: 1; margin-top: .75rem; }
 #consulting .service-row h3 { font-size: clamp(1.25rem, 2vw, 1.75rem); }
 #consulting .service-row h3::after { content: '↘'; display: inline; }
+
+/* Cards in horizontal scroll can't use viewport-based reveal — off-screen
+   cards (3-6) never intersect the viewport so they'd stay opacity:0 forever.
+   Override the .reveal system so all consulting cards are always visible. */
+#consulting .service-row.reveal,
+#consulting .service-row.reveal.visible { opacity: 1; transform: none; }
