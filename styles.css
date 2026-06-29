@@ -692,7 +692,10 @@ a.product-row:hover .pr-name { color:var(--lime); }
 /* ── CONSULTING: single-column editorial layout ─────────── */
 /* Heading: 3 forced lines via <br>, massive scale */
 .consulting-hl {
-  font-size: clamp(5rem, 12vw, 14rem);
+  /* 9vw scales proportionally with the 90vw container so "consulting."
+     (11 chars × 0.78em) never outruns the inner content width.
+     Max 9rem caps at 144px — safe at all viewport sizes. */
+  font-size: clamp(2rem, 9vw, 9rem);
   line-height: .88;
   letter-spacing: -.055em;
   margin: clamp(1.25rem, 2.5vw, 2rem) 0 0;
@@ -725,10 +728,8 @@ a.product-row:hover .pr-name { color:var(--lime); }
   .results-strip .result-item:nth-child(4) { border-top: 1px solid var(--rule); border-right: none; }
   /* Shrink metrics so multi-word values like "Billboard #2" don't wrap */
   .results-strip .result-metric { font-size: clamp(1.5rem, 5vw, 2.25rem); }
-  .consulting-hl { font-size: clamp(3rem, 10vw, 5rem); }
 }
 @media (max-width: 480px) {
-  .consulting-hl { font-size: clamp(2.75rem, 10.5vw, 3.75rem); }
   /* Results strip: 2-col on narrow screens — reduce font + padding so
      "Billboard #2" (12 chars) doesn't overflow ~140px cells */
   .results-strip .result-metric { font-size: clamp(1rem, 4.5vw, 1.4rem); }
