@@ -554,7 +554,10 @@ a.product-row:hover .pr-name { color:var(--lime); }
 }
 
 @media (max-width:640px) {
-  .hl-line { padding-left:calc(var(--i,0) * clamp(1.25rem,5vw,3rem)); }
+  /* Hero heading: clamp min (5.5rem=88px) is too large for narrow screens;
+     at 390px "Consult." needs ~350px but content width is only ~342px */
+  .hero-hl { font-size: clamp(3rem, 13vw, 5.5rem); }
+  .hl-line { padding-left:calc(var(--i,0) * clamp(.75rem,3vw,1.75rem)); }
   .form-row { grid-template-columns:1fr; }
   .footer-inner { flex-direction:column; align-items:flex-start; gap:1rem; }
 
@@ -726,6 +729,10 @@ a.product-row:hover .pr-name { color:var(--lime); }
 }
 @media (max-width: 480px) {
   .consulting-hl { font-size: clamp(2.75rem, 10.5vw, 3.75rem); }
+  /* Results strip: 2-col on narrow screens — reduce font + padding so
+     "Billboard #2" (12 chars) doesn't overflow ~140px cells */
+  .results-strip .result-metric { font-size: clamp(1rem, 4.5vw, 1.4rem); }
+  .results-strip .result-item { padding: .875rem .75rem; }
 }
 
 /* ── AUDIT STRIP — full saturated blue panel ────────────── */
@@ -761,7 +768,6 @@ a.product-row:hover .pr-name { color:var(--lime); }
   font-size: clamp(5rem,12vw,13rem);
   letter-spacing: -.05em; line-height: .9;
   margin-bottom: clamp(2rem,4vw,3.5rem);
-  white-space: nowrap;
 }
 
 /* ── RESPONSIVE WILD OVERRIDES ──────────────────────────── */
